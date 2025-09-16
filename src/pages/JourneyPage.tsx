@@ -54,16 +54,11 @@ const locations: Location[] = [
 ];
 
 const JourneyPage = () => {
-  const [selectedLocation, setSelectedLocation] = useState<Location | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentStep, setCurrentStep] = useState(0);
   const [isReplaying, setIsReplaying] = useState(false);
   const globeRef = useRef<HTMLDivElement>(null);
   const worldRef = useRef<any>(null);
-
-  const handleLocationClick = (location: Location) => {
-    setSelectedLocation(location);
-  };
 
   const handlePlay = () => {
     setIsPlaying(true);
@@ -140,12 +135,6 @@ const JourneyPage = () => {
         .pointAltitude(0.01)
         .pointRadius('size')
         .pointResolution(8)
-        .onPointClick((point: any) => {
-          const location = locations.find(loc => 
-            loc.coordinates[0] === point.lng && loc.coordinates[1] === point.lat
-          );
-          if (location) handleLocationClick(location);
-        });
 
       // Add journey arcs
       const arcsData = [];
