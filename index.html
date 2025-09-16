@@ -12,6 +12,15 @@
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
     
+    <!-- Ensure landing page loads first -->
+    <script>
+      // Redirect to landing page if on root
+      if (window.location.pathname === '/' || window.location.pathname === '/tshisau-musangu-portfolio/') {
+        // Let React Router handle the routing
+        console.log('Loading landing page...');
+      }
+    </script>
+    
     <!-- Start Single Page Apps for GitHub Pages -->
     <script type="text/javascript">
       // Single Page Apps for GitHub Pages
