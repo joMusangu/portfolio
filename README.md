@@ -155,7 +155,7 @@ This portfolio is configured for automatic deployment to GitHub Pages. Here's ho
 
 3. **Your site will be available at:**
    ```
-   https://jomusangu.github.io/tshisau-musangu-portfolio/
+   https://jomusangu.github.io/portfolio/
    ```
 
 ### Manual Deployment (Alternative)
@@ -174,7 +174,7 @@ npm run deploy
 
 The following files are configured for GitHub Pages:
 
-- **`vite.config.ts`** - Sets the correct base path
+- **`vite.config.ts`** - Sets the correct base path (`/portfolio/`)
 - **`package.json`** - Contains homepage URL and deploy scripts
 - **`.github/workflows/deploy.yml`** - GitHub Actions workflow for automatic deployment
 - **`public/.nojekyll`** - Ensures GitHub Pages serves the files correctly
@@ -227,7 +227,7 @@ My life journey visualized on an interactive 3D globe:
 
 ## 📄 Resume
 
-Download my latest resume: [Tshisau_Musangu_Resume.pdf](/tshisau-musangu-portfolio/resume.pdf)
+Download my latest resume: [Tshisau_Musangu_Resume.pdf](/portfolio/resume.pdf)
 
 ## 🎨 Design Philosophy
 

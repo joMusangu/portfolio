@@ -109,6 +109,6 @@ ls -la dist/
 ## 🎉 Success!
 
 Once deployed, your portfolio will be live at:
-**https://jomusangu.github.io/tshisau-musangu-portfolio/**
+**https://jomusangu.github.io/portfolio/**
 
 The site will automatically update whenever you push changes to the main branch!
