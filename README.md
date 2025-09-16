@@ -133,6 +133,52 @@ npm run build
 npm run preview
 ```
 
+## 🚀 GitHub Pages Deployment
+
+This portfolio is configured for automatic deployment to GitHub Pages. Here's how to set it up:
+
+### Automatic Deployment (Recommended)
+
+1. **Push your code to GitHub**
+   ```bash
+   git add .
+   git commit -m "Deploy to GitHub Pages"
+   git push origin main
+   ```
+
+2. **Enable GitHub Pages in your repository settings:**
+   - Go to your repository on GitHub
+   - Click on **Settings** tab
+   - Scroll down to **Pages** section
+   - Under **Source**, select **GitHub Actions**
+   - The workflow will automatically deploy when you push to the main branch
+
+3. **Your site will be available at:**
+   ```
+   https://jomusangu.github.io/tshisau-musangu-portfolio/
+   ```
+
+### Manual Deployment (Alternative)
+
+If you prefer manual deployment:
+
+```bash
+# Build the project
+npm run build
+
+# Deploy to GitHub Pages
+npm run deploy
+```
+
+### Configuration Files
+
+The following files are configured for GitHub Pages:
+
+- **`vite.config.ts`** - Sets the correct base path
+- **`package.json`** - Contains homepage URL and deploy scripts
+- **`.github/workflows/deploy.yml`** - GitHub Actions workflow for automatic deployment
+- **`public/.nojekyll`** - Ensures GitHub Pages serves the files correctly
+
 ## 🎮 Special Features
 
 ### **Pixel Art Animations**
