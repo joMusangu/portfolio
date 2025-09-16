@@ -99,7 +99,7 @@ const AboutPage = () => {
                     🌍 MY JOURNEY
                   </Link>
                   <a 
-                    href="/resume.pdf" 
+                    href="/tshisau-musangu-portfolio/resume.pdf" 
                     download="Tshisau_Musangu_Resume.pdf"
                     className="pixel-button resume-button pixel-pulse"
                   >

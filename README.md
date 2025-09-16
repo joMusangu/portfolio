@@ -227,7 +227,7 @@ My life journey visualized on an interactive 3D globe:
 
 ## 📄 Resume
 
-Download my latest resume: [Tshisau_Musangu_Resume.pdf](/resume.pdf)
+Download my latest resume: [Tshisau_Musangu_Resume.pdf](/tshisau-musangu-portfolio/resume.pdf)
 
 ## 🎨 Design Philosophy
 
