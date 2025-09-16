@@ -1,0 +1,344 @@
+/* About Page Styles */
+.about-page {
+  min-height: 100vh;
+  padding: 40px 0;
+}
+
+.about-hero {
+  padding: 40px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 60px;
+  margin-top: 40px;
+  align-items: start;
+}
+
+.character-showcase {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.pixel-character-large {
+  background-color: var(--pixel-bg);
+  border: 4px solid var(--pixel-border);
+  padding: 30px;
+  box-shadow: 8px 8px 0px var(--pixel-shadow);
+  border-radius: 0;
+}
+
+.character-art-large {
+  font-family: 'Courier New', monospace;
+  font-size: 10px;
+  line-height: 1;
+  color: var(--pixel-primary);
+  text-shadow: 2px 2px 0px var(--pixel-shadow);
+  margin: 0;
+  white-space: pre;
+}
+
+.character-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: var(--pixel-bg);
+  border: 2px solid var(--pixel-border);
+  box-shadow: 3px 3px 0px var(--pixel-shadow);
+}
+
+.stat-label {
+  font-size: 10px;
+  color: var(--pixel-secondary);
+}
+
+.stat-value {
+  font-size: 10px;
+  color: var(--pixel-text);
+  font-weight: bold;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.story-card {
+  padding: 30px;
+}
+
+.story-card .pixel-text {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.skills-section {
+  padding: 30px;
+  background-color: rgba(0, 128, 255, 0.05);
+  border: 3px solid var(--pixel-border);
+  box-shadow: 6px 6px 0px var(--pixel-shadow);
+}
+
+.skills-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background-color: var(--pixel-bg);
+  border: 2px solid var(--pixel-border);
+  box-shadow: 3px 3px 0px var(--pixel-shadow);
+}
+
+.skill-icon {
+  font-size: 24px;
+  width: 40px;
+  text-align: center;
+}
+
+.skill-name {
+  font-size: 10px;
+  color: var(--pixel-text);
+  min-width: 120px;
+}
+
+.skill-bar {
+  flex: 1;
+  height: 20px;
+  background-color: var(--pixel-border);
+  border: 2px solid var(--pixel-border);
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-progress {
+  height: 100%;
+  background: linear-gradient(90deg, var(--pixel-primary), var(--pixel-highlight));
+  transition: width 2s ease-in-out;
+  position: relative;
+}
+
+.skill-progress::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  animation: skill-shine 2s infinite;
+}
+
+@keyframes skill-shine {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.timeline-section {
+  padding: 80px 20px;
+  background-color: rgba(255, 128, 0, 0.05);
+  border-top: 3px solid var(--pixel-border);
+}
+
+.text-center {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: var(--pixel-border);
+  box-shadow: 2px 2px 0px var(--pixel-shadow);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+  padding-left: 80px;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: 20px;
+  height: 20px;
+  background-color: var(--pixel-primary);
+  border: 3px solid var(--pixel-border);
+  box-shadow: 3px 3px 0px var(--pixel-shadow);
+  z-index: 2;
+}
+
+.timeline-content {
+  padding: 20px;
+  position: relative;
+}
+
+.timeline-content h3 {
+  color: var(--pixel-secondary);
+  margin-bottom: 10px;
+}
+
+.timeline-content p {
+  text-align: left;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .character-showcase {
+    order: 2;
+  }
+  
+  .about-text {
+    order: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero {
+    padding: 20px 10px;
+  }
+  
+  .character-art-large {
+    font-size: 8px;
+  }
+  
+  .stat-item {
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+  }
+  
+  .skill-item {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+  
+  .skill-name {
+    min-width: auto;
+  }
+  
+  .timeline::before {
+    left: 20px;
+  }
+  
+  .timeline-item {
+    padding-left: 60px;
+  }
+  
+  .timeline-marker {
+    left: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .character-art-large {
+    font-size: 6px;
+  }
+  
+  .pixel-character-large {
+    padding: 20px;
+  }
+  
+  .story-card,
+  .skills-section {
+    padding: 20px;
+  }
+  
+  .timeline-item {
+    padding-left: 50px;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .journey-button,
+  .resume-button {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+}
+
+/* CTA Buttons */
+.cta-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.journey-button,
+.resume-button {
+  font-size: 14px;
+  padding: 15px 30px;
+  background: linear-gradient(45deg, var(--pixel-primary), var(--pixel-secondary));
+  border: 3px solid var(--pixel-border);
+  box-shadow: 6px 6px 0px var(--pixel-shadow);
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  color: var(--pixel-text);
+  font-weight: bold;
+}
+
+.resume-button {
+  background: linear-gradient(45deg, var(--pixel-accent), var(--pixel-highlight));
+}
+
+.journey-button:hover,
+.resume-button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 8px 8px 0px var(--pixel-shadow);
+}
+
+.journey-button:hover {
+  background: linear-gradient(45deg, var(--pixel-highlight), var(--pixel-accent));
+}
+
+.resume-button:hover {
+  background: linear-gradient(45deg, var(--pixel-primary), var(--pixel-secondary));
+}
